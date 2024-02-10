@@ -1,4 +1,4 @@
-Proximos ajustes:
+Proximas modificaciones:
 
 - Ajustar posicionamiento del navbar.
 - Ajustar distancia entre info e img de la sección sobre mi.
