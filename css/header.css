@@ -1,0 +1,149 @@
+.container{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.hero{
+    /* background: black; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.2)), url(/img/fond2.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    height: 100vh;
+}
+
+.nav{
+    --state-close: scale(0);
+    --state-hamburguer: scale(1);
+    --state-menu: translate(-100%);
+    /* position: fixed; */
+
+    padding: 40px 0;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(2, max-content);
+}
+
+.nav:target{
+    --state-menu: translate(0);
+    --state-close: scale(1);
+    --state-hamburguer: scale(0);
+}
+
+.logo{
+    width: 3rem;
+    height: 3rem;
+    z-index: 1;
+}
+
+.nav__hamburguer,
+.nav__close{
+    cursor: pointer;
+    grid-column: -2/-1;  /* se posicionan en columnas desde la penultima última línea hasta la última*/
+    grid-row: 1/2; /* se posicionen en filas de la primera a la segunda */
+    transition: .4s transform;
+}
+
+.nav__hamburguer{
+    transform: var(--state-hamburguer);
+}
+
+.nav__close{
+    transform: var(--state-close);
+}
+
+.nav__icon{
+    font-size: 40px;
+}
+
+.nav__links{
+    background-color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: grid;
+    align-content: center;
+    gap: 2em; /* espaciado entre líneas */
+    padding-left: 5%;
+
+    transform: var(--state-menu);
+    transition: .3s transform;
+}
+
+.nav__link{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.pres{
+    padding: 0 15%;
+    font-family: 'Nunito', sans-serif;
+
+    height: 50vh;
+    /* height: 100vh; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pres-text h1{
+    font-size: 70px;
+    font-weight: 800;
+    mask-border: 5px;
+}
+
+.pres-text p{
+    font-size: 22px;
+    font-weight: 300;
+}
+
+@media (min-width: 768px){
+    .nav{
+        --state-hamburguer: scale(0);
+        --state-menu: translate(0);
+    }
+    
+    .nav:target{
+        --state-close: scale(0);
+    }
+
+    .nav__links{
+        padding: 0;
+        background-color: unset;
+        position: unset;
+        gap: 1.5em; /* espaciado entre líneas */
+        grid-auto-flow: column;
+    
+        transform: unset;
+        
+        grid-column: -2/-1;
+        grid-row: 1/2;
+    }
+
+    .nav__link{
+        font-size: 1rem;
+        letter-spacing: none;
+    }
+
+    /* text pres name */
+
+    .pres{
+        padding: 0 5%;
+    }
+    
+    .pres-text h1{
+        font-size: 90px;
+    }
+    
+    .pres-text p{
+        font-size: 30px;
+    }
+}
