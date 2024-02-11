@@ -63,7 +63,7 @@
     padding: 0 20px;
 }
 
-.container-data-skill a{
+.container-data-skill div{
     font-weight: 300;
     transition: .3s;
     text-align: left;
@@ -71,12 +71,13 @@
     font-size: 18px;
 }
 
-.container-data-skill a i{
+.container-data-skill div i{
     float: right;
 }
 
-.container-data-skill a:hover{
+.container-data-skill div:hover{
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 @media (max-width: 968px){
