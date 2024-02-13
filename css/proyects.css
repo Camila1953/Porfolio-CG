@@ -9,7 +9,8 @@ img{
     place-items: center;
     margin-inline: 1.5rem;
     /* padding-block: 5rem; */
-    padding-block: 10rem;
+    /* padding-block: 10rem; */
+    min-height: 100vh;
 }
 
 .proyect-header{
@@ -158,9 +159,9 @@ img{
 }
 
 @media (min-width: 1120px) {
-    .proyect{
-        height: 100vh;
-    }
+    /* .proyect{
+        min-height: 100vh;
+    } */
 
     .card_container{
         grid-template-columns: repeat(3, 1fr);
