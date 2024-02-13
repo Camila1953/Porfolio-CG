@@ -1,12 +1,29 @@
 .skills{
-    height: 80vh;
-    margin-top: 10%;
+    /* height: 100vh;
+    margin-top: 20%; */
+
+     /* OPCION 1 */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* OPCION 2 */
+    /* min-height:100vh;
+    display: grid;
+    place-items: center; */
 }
+
+/* .container-section-skills{
+    place-items: center;
+} */
 
 .skills-header{
     width: 100%;
     text-align: center;
-    padding: 20px 0;
+    /* padding: 20px 0; */
+    /* padding-bottom: 30px; */
+    margin-bottom: 90px;
 }
 
 .skills-header h1{
@@ -16,9 +33,10 @@
 .container-skill{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
     flex-flow: wrap;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .container-skill .container-box-skill{
@@ -26,6 +44,7 @@
     width: 400px;
     height: 300px;
     border-radius: 10%;
+    margin: 0 30px;
 }
 
 .container-skill .container-logo-skill{
@@ -60,7 +79,8 @@
     flex-direction: column;
     /* width: 90%; */
     width: 100%;
-    padding: 0 20px;
+    padding: 0 30px;
+    /* padding: 0 20px; */
 }
 
 .container-data-skill div{
@@ -71,11 +91,13 @@
     font-size: 18px;
 }
 
-.container-data-skill div i{
+.container-data-skill div i,
+.container-data-skill div img{
     float: right;
 }
 
-.container-data-skill div:hover{
+.container-data-skill div:hover,
+.container-data-skill div img:hover{
     transform: scale(1.1);
     cursor: pointer;
 }
