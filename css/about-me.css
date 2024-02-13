@@ -61,6 +61,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    /* padding-left: 70px; */
 }
 
 .about-me-img{
@@ -108,6 +109,10 @@
     
     .about-me-btn{
         font-size: 22px;
+    }
+
+    .about-me-img-section{
+        padding-left: 70px;
     }
     
     .about-me-img{

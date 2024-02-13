@@ -51,14 +51,7 @@
     font-weight: 300;
     letter-spacing: 2px;
     max-height: 0;
-    opacity: 0;
-    transition: 0.3s linear;
     background: transparent;
-}
-
-.card:hover p{
-    max-height: 40px;
-    opacity: 1;
 }
 
 @media (max-width:920px){
