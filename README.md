@@ -21,8 +21,9 @@ Lunes 12 de febrero:
 <!-- - Agregar iconos de bandera en la sección habilidades - idiomas. (30m) | ✔ | -->
 
 Martes 13 de febrero:
-- Ajustar separación entre las secciones (tener en cuenta empezar desde min-320). (3h)
-- Centrar adecuadamente sección educación y habilidades. (2h)
+<!-- - Ajustar separación entre las secciones (tener en cuenta empezar desde min-320). (3h) -->
+<!-- - Centrar adecuadamente sección educación y habilidades. (2h) -->
+<!-- NOTA: Hecho con ayuda de Braian en 1h aprox. -->
 
 Jueves 15 de febrero:
 - Ajustar posicionamiento del navbar. (4h)

@@ -159,10 +159,6 @@ img{
 }
 
 @media (min-width: 1120px) {
-    /* .proyect{
-        min-height: 100vh;
-    } */
-
     .card_container{
         grid-template-columns: repeat(3, 1fr);
     }
