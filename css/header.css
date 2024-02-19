@@ -1,11 +1,60 @@
-.container{
-    margin: 0 auto;
-    width: 90%;
-    max-width: 1200px;
-    overflow: hidden;
+html{
+    scroll-behavior: smooth;
 }
 
-.header{
+/* section[id]{
+    scroll-margin-top: 70px;
+} */
+
+.topheader{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.427);
+    /* background: rgba(0, 0, 0, 0.2); */
+    /* backdrop-filter: blur(30px); */
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.topnav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 980px; 
+    margin: 0 auto; 
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+/* MENÚ */
+
+.menu{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    padding: 0 15px;
+}
+
+.menu a{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+.open-menu,
+.close-menu{
+    display: none;
+}
+
+.banner{
     background-image: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.2)), url(/img/fond2.jpg);
     background-size: cover;
     background-position: center center;
@@ -14,78 +63,11 @@
     height: 100vh;
 }
 
-.nav{
-    --state-close: scale(0);
-    --state-hamburguer: scale(1);
-    --state-menu: translate(-100%);
-
-    padding: 40px 0;
-    display: grid;
-    justify-content: space-between;
-    align-items: center;
-    grid-template-columns: repeat(2, max-content);
-}
-
-.nav:target{
-    --state-menu: translate(0);
-    --state-close: scale(1);
-    --state-hamburguer: scale(0);
-}
-
-.logo{
-    width: 3rem;
-    height: 3rem;
-    z-index: 1;
-}
-
-.nav__hamburguer,
-.nav__close{
-    cursor: pointer;
-    grid-column: -2/-1;  /* se posicionan en columnas desde la penultima última línea hasta la última*/
-    grid-row: 1/2; /* se posicionen en filas de la primera a la segunda */
-    transition: .4s transform;
-}
-
-.nav__hamburguer{
-    transform: var(--state-hamburguer);
-}
-
-.nav__close{
-    transform: var(--state-close);
-}
-
-.nav__icon{
-    font-size: 40px;
-}
-
-.nav__links{
-    background-color: black;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    display: grid;
-    align-content: center;
-    gap: 2em; /* espaciado entre líneas */
-    padding-left: 5%;
-
-    transform: var(--state-menu);
-    transition: .3s transform;
-}
-
-.nav__link{
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-}
-
-.pres{
+.pres-container{
     padding: 0 15%;
     font-family: 'Nunito', sans-serif;
 
-    height: 50vh;
-    /* height: 100vh; */
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -94,55 +76,88 @@
 }
 
 .pres-text h1{
-    font-size: 70px;
-    font-weight: 800;
+    font-size: 90px;
+    font-weight: 700;
     mask-border: 5px;
 }
 
 .pres-text p{
-    font-size: 22px;
+    font-size: 50px;
     font-weight: 300;
 }
 
-@media (min-width: 768px){
-    .nav{
-        --state-hamburguer: scale(0);
-        --state-menu: translate(0);
+@media (max-width: 950px){
+    .menu{
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        align-items: center;
+        /* justify-content: center; */
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(30px);
+        height: 100%;
+        overflow-y: auto;
+
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
     }
     
-    .nav:target{
-        --state-close: scale(0);
-    }
-
-    .nav__links{
+    .menu li{
         padding: 0;
-        background-color: unset;
-        position: unset;
-        gap: 1.5em; /* espaciado entre líneas */
-        grid-auto-flow: column;
+    }
+
+    /* .menu .list{
+        min-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    } */
     
-        transform: unset;
-        
-        grid-column: -2/-1;
-        grid-row: 1/2;
+    .menu a{
+        line-height: 60px;
+    }
+    
+    .open-menu,
+    .close-menu{
+        display: block;
+        border: none;
+        background: none;
+        cursor: pointer;
     }
 
-    .nav__link{
-        font-size: 1rem;
-        letter-spacing: none;
+    .close-menu{
+        align-self: flex-end;
+        padding: 10px 15px;
     }
 
-    /* text pres name */
+    .menu_opened{
+        opacity: 1;
+        pointer-events: all;
+    }
 
-    .pres{
+    .pres-container{
         padding: 0 5%;
     }
     
     .pres-text h1{
-        font-size: 90px;
+        font-size: 70px;
     }
     
     .pres-text p{
         font-size: 30px;
+    }
+}
+
+@media (max-width: 480px){
+    .pres-text h1{
+        font-size: 60px;
+    }
+    
+    .pres-text p{
+        font-size: 20px;
     }
 }
