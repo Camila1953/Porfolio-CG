@@ -5,18 +5,18 @@ img{
 }
 
 .proyect{
-    display: grid;
-    place-items: center;
-    margin-inline: 1.5rem;
-    /* padding-block: 5rem; */
-    /* padding-block: 10rem; */
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .proyect-header{
     width: 100%;
     text-align: center;
-    padding: 10px 0;
+    /* padding: 50px 0; */
+    padding-bottom: 90px;
 }
 
 .proyect-header h1{
@@ -25,7 +25,8 @@ img{
 
 .card_container{
     display: grid;
-    row-gap: 3.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.5rem;
 }
 
 .card_article{
@@ -34,13 +35,14 @@ img{
 }
 
 .card_img{
-    width: 390px;
-    /* width: 328px; */
+    width: 348px;
     border-radius: 1.5rem;
 }
 
 .card_data{
-    width: 280px;
+    width: 230px;
+    padding-inline: 2.5rem;
+
     background-color: #0f0f0f;
     padding: 1.5rem 2rem;
     box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
@@ -61,8 +63,9 @@ img{
     margin-bottom: .75rem;
 }
 
+/* NO TOCAR */
+
 .card_button{
-    /* display: inline-block; */
     opacity: 0.75;
 }
 
@@ -126,49 +129,54 @@ img{
     }
 }
 
-@media (min-width: 320px) {
-    .proyect-header{
-        padding: 50px 0;
-    }
-}
+/* FIN NO TOCAR */
 
-@media (min-width: 340px) {
+@media (max-width: 1120px) {
     .proyect{
-        margin-inline: 1rem;
+        padding-inline: 1rem;
     }
 
     .proyect-header{
-        padding: 50px 0;
-    }
-
-    .card_data{
-        width: 250px;
-        padding: 1rem;
-    }
-}
-
-@media (min-width: 768px) { 
-    .proyect-header{
-        padding: 50px 0;
+        /* padding: 10px 0; */
+        padding-bottom: 90px;
     }
 
     .card_container{
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 1.5rem;
-    }
-}
-
-@media (min-width: 1120px) {
-    .card_container{
-        grid-template-columns: repeat(3, 1fr);
+        row-gap: 3.5rem;
     }
 
     .card_img{
-        width: 348px;
+        width: 390px;
+    }
+}
+
+@media (max-width: 768px) {
+    .proyect{
+        padding-top: 20%;
+    }
+
+    .proyect-header{
+        /* padding: 10px 0; */
+        padding-bottom: 60px;
+    }
+
+    .card_container{
+        grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
     }
 
     .card_data{
-        width: 230px;
-        padding-inline: 2.5rem;
+        width: 280px;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 340px) {
+    .proyect{
+        padding-top: 15%;
+    }
+
+    .card_data{
+        width: 250px;
     }
 }

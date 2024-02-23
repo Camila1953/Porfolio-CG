@@ -1,29 +1,14 @@
 .skills{
-    /* height: 100vh;
-    margin-top: 20%; */
-
-     /* OPCION 1 */
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    /* OPCION 2 */
-    /* min-height:100vh;
-    display: grid;
-    place-items: center; */
 }
-
-/* .container-section-skills{
-    place-items: center;
-} */
 
 .skills-header{
     width: 100%;
     text-align: center;
-    /* padding: 20px 0; */
-    /* padding-bottom: 30px; */
-    margin-bottom: 90px;
+    padding-bottom: 90px;
 }
 
 .skills-header h1{
@@ -33,10 +18,8 @@
 .container-skill{
     display: flex;
     flex-direction: row;
-    /* justify-content: space-around; */
     justify-content: space-evenly;
     flex-flow: wrap;
-    /* margin-top: 20px; */
 }
 
 .container-skill .container-box-skill{
@@ -77,10 +60,8 @@
 .container-skill .container-data-skill{
     display: flex;
     flex-direction: column;
-    /* width: 90%; */
     width: 100%;
     padding: 0 30px;
-    /* padding: 0 20px; */
 }
 
 .container-data-skill div{
@@ -103,12 +84,26 @@
 }
 
 @media (max-width: 968px){
+    .skills{
+        padding-top: 10%;
+    }
+
+    .skills-header{
+        margin-bottom: 40px;
+    }
+
     .skills-header h1{
         font-size: 30px;
     }
 
     .container-skill .container-box-skill{
         margin: 20px 0;
+    }
+}
+
+@media (max-width: 800px){
+    .skills{
+        padding-top: 20%;
     }
 }
 
@@ -120,12 +115,15 @@
 
 @media (max-width: 426px){
     .skills{
-        margin-top: 50%;
+        padding-top: 22%;
     }
 }
 
-
 @media (max-width: 410px){
+    .skills{
+        padding-top: 26%;
+    }
+
     .container-skill .container-box-skill{
         width: 330px;
     }
