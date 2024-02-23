@@ -20,51 +20,54 @@
     <script src="https://kit.fontawesome.com/4fef218698.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <script defer src="sript.js"></script>
 </head>
 <body>
     <!-- Barra de Navegación -->
-    <header class="header">
+    <header class="topheader">
+        <nav class="topnav">
+            <a href="#" class="logo">
+                <img src="img/Logo__CG.png" alt="CG Logo" height="50" width="50">
+            </a>
+            <button class="open-menu">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAAAOVJREFUaEPtmMENhEAMA+GZrq60K+26ypMTDWBLoJWJhm8C2J6wrHbfhl77UF8bxt5GFmIQC0mAUQwBYcuAmB1VSCPEQkDYMixi3f21n7igsaqkHtfYsUCv/Yqqkrplw/m27saYHfuNRojdCC/2Vusbi1V/IQxjb6MGsZHEuvuTZKyqfkqPNYrsPFSMD9XZeaggJ4/izMVDEU2sW6tionClCWMqobQ6xNKIKD0Wscn/MU6p1Ig8UWevqFIce8StjCfWrVUxUbjShDGVUFodYmlElB6IqYTS6hBLI6L0QEwllFYfS+wPTc5AN8F2ojUAAAAASUVORK5CYII="/>
+            </button>
 
-        <nav class="nav container" id="nav">
-            <img src="img/Logo__CG.png" alt="CG Logo" class="logo">
-
-            <ul class="nav__links">
-                <li class="nav__item">
-                    <a href="#about-me" class="nav__link">Sobre mi</a>
+            <ul class="menu">
+                <button class="close-menu">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAAAi5JREFUaEPtmM1KI0EQx6sgJFXBDxB8CxcXQRB9kL2oeIoie9M3cPUNREFB2MXbPoCiiOIThRymc9DSgRkYpBNnqrvHcehcM11dv/+/uvoDoaU/bCkXRLDv5mx0LDrWEAViKTbEiNJpRMdKS9WQD6NjDTGidBrRsUlSDYfDhW63u8fMJ6XlnPChiMwYYw6J6AgRX1ziOTmWQT0CwA8AuCCiXUQUTUIZ1AMArCLi/16v9wsRXzWx0jFqMBGZN8Y8Z1D5/H+JaKcqXBGqAHJNRFtVY+Xj1WBJkpwDwK5F0UsiGpRNKIO6A4A1S6xNZr7WuKYGm6ByJed8xJgErQZLA7okJiJzxpj7dE1ZklOVdDGOE5gWLoUaj8dPIvIzBJRT8ygmVMW5T6CcOqtXx/JgZeAAYHaKUxfMPNA0CtsY51K0OHcLAOuWya4QcVlEVj7+JyKn/X7/ty8ob6X4AY6zpmCDs+Xu1SnnfWyauiJSFi4IVBDHCmvuM7hgUBGs6qJuZSlWgMr1ClKSIdr9DQBs2E4U79eRJVu7B4AzZt6vWhnTvvcG1soNugxUfo35NkeqKlCFraDZh2ANVF1w6jXmAlWEC3UnU4MlSXIGAHuWzuTzaWCbmf9puqUarLWPOamKrXx+y8tjNBotdjqdATMfa0rGcp87IKI/X/pg6goScrx6jYVMykfsCOZDxTpjRMfqVNvHXNExHyrWGSM6VqfaPuaKjvlQsc4Y0bE61fYx1xtl+IBGgIGtewAAAABJRU5ErkJggg=="/>
+                </button>
+                <!-- <div class="list"> -->
+                <li>
+                    <a href="#about-me">Sobre mi</a>
                 </li>
-                <li class="nav__item">
-                    <a href="#education" class="nav__link">Educación</a>
+                <li>
+                    <a href="#education">Educación</a>
                 </li>
-                <li class="nav__item">
-                    <a href="#skills" class="nav__link">Habilidades</a>
+                <li>
+                    <a href="#skills">Habilidades</a>
                 </li>
-                <li class="nav__item">
-                    <a href="#proyect" class="nav__link">Proyectos</a>
+                <li>
+                    <a href="#proyect">Proyecto</a>
                 </li>
-                <li class="nav__item">
-                    <a href="#contact" class="nav__link">Contacto</a>
+                <li>
+                    <a href="#contact">Contacto</a>
                 </li>
+                <!-- </div> -->
             </ul>
-
-            <a href="#nav" class="nav__hamburguer">
-                <i class='bx bx-menu nav__icon'></i>
-            </a>
-
-            <a href="#" class="nav__close">
-                <i class='bx bx-x-circle nav__icon'></i>
-            </a>
-
         </nav>
+    </header>
 
-        <!-- Nombre incio -->
-        <section class="pres">
+    <!-- Nombre incio -->
+    <section class="banner">
+        <div class="pres-container">
             <div class="pres-text">
                 <h1>Camila Gonzales</h1>
                 <p>Front End Developer Jr</p>
             </div>
-        </section>
-
-    </header>
+        </div>
+    </section>
 
     <!-- Sobre Me -->
     <section class="container-about-me" id="about-me">
