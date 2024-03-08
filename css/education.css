@@ -59,6 +59,7 @@
 }
 
 .content h2{
+    line-height: 1.5;
     font-size: 24px;
     padding-bottom: 8px;
     color: #bad3e2;
@@ -119,7 +120,7 @@
     }
 
     .education-header{
-        padding-bottom: 56px;
+        padding-bottom: 60px;
     }
 
     .row:nth-child(odd),
@@ -187,10 +188,6 @@
 @media (max-width: 425px){
     .education{
         padding-top: 6%;
-    }
-
-    .education-header{
-        padding-bottom: 50px;
     }
 
     .row .content{

@@ -89,11 +89,11 @@
     }
 
     .skills-header{
-        margin-bottom: 40px;
+        padding-bottom: 60px;
     }
 
     .skills-header h1{
-        font-size: 30px;
+        font-size: 40px;
     }
 
     .container-skill .container-box-skill{

@@ -3,6 +3,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+.contact-header{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.contact-header h1{
+    font-size: 40px;
 }
 
 .contact-info{
@@ -26,7 +37,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 }
 
 .card-icon{
@@ -37,10 +47,11 @@
     text-align: center;
     line-height: 60px !important;
     border-radius: 50%;
+    cursor: pointer;
     transition: 0.3s linear;
 }
 
-.card:hover .card-icon{
+.card .card-icon:hover{
     background: none;
     color: #bad3e2;
     transform: scale(1.6);
